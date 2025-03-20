@@ -1,0 +1,80 @@
+/* Features Section Styling */
+.features {
+    text-align: center;
+    padding: 105px 110px;
+    background: #f9f9f9;
+  }
+  
+  .features .heading {
+    font-size: 2.5rem;
+    color: #2b7a0b;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+  
+  /* Features Container */
+  .feature-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem
+  }
+  
+  /* Individual Feature Box */
+  .feature-box {
+    flex: 1 2 20rem;
+    background: rgba(255, 255, 255, 0.74);
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 128, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  /* Hover Effect */
+  .feature-box:hover {
+    border-color: #2b7a0b;
+    transform: translateY(-5px);
+    background: rgba(43, 122, 11, 0.05);
+    box-shadow: 0px 8px 15px rgba(0, 128, 0, 0.2);
+  }
+  
+  /* Feature Icons */
+  .feature-box i {
+    font-size: 3.5rem;
+    color: #2b7a0b;
+    margin-bottom: 1rem;
+  }
+  
+  /* Feature Title */
+  .feature-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Feature Description */
+  .feature-box p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  /* Learn More Button */
+  .feature-box .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2b7a0b;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .feature-box .btn:hover {
+    background: #1f5a08;
+  }
+  

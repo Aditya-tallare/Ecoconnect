@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #e0f2f1;
+}
+
+/* Sustainability Page */
+.sustainability-page {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header */
+.sustainability-header h1 {
+    font-size: 2rem;
+    color: #155e75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sustainability-header p {
+    font-size: 1.2rem;
+    color: #4e8d6a;
+    margin-top: 10px;
+}
+
+/* Tip Box */
+.tip-box {
+    background: #c8e6c9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #155e75;
+    font-weight: bold;
+}
+
+/* Tips List */
+.tips-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.tips-list h2 {
+    color: #155e75;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.tips-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tips-list li {
+    background: #e8f5e9;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    color: #155e75;
+    font-size: 1.1rem;
+}

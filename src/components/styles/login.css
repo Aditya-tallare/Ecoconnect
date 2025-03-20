@@ -1,0 +1,95 @@
+/* Login Page Styles */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #2c7a2c, #155e75);
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    padding: 4rem;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 450px;
+    max-width: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-box:hover {
+    transform: scale(1.02);
+}
+
+.login-box h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #2c7a2c;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #1e5e1e;
+    font-weight: bold;
+}
+
+.login-box p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    margin: 20px 0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #2c7a2c;
+    box-shadow: 0px 0px 10px rgba(44, 122, 44, 0.3);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background: #2c7a2c;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background: #1e5e1e;
+    box-shadow: 0px 5px 15px rgba(30, 94, 30, 0.3);
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.register-link a {
+    color: #2c7a2c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

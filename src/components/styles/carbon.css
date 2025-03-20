@@ -1,0 +1,113 @@
+/* Carbon Footprint Calculator - Professional UI */
+.carbon-calculator {
+    background: white;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+body{
+    background:linear-gradient(to right, #2c7a2c, #155e75);
+}
+/* Heading */
+.carbon-calculator h2 {
+    font-size: 2rem;
+    color: #155e75;
+    margin-bottom: 10px;
+}
+
+.carbon-calculator p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Questions */
+.question {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.question label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.question input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.question input:focus {
+    border-color: #2c7a2c;
+}
+
+/* Calculate Button */
+.calculate-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2c7a2c;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.calculate-btn:hover {
+    background: #1e5e1e;
+}
+
+/* Result Display */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef7ee;
+    border-left: 5px solid #2c7a2c;
+    font-size: 1.2rem;
+    color: #155e75;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carbon-calculator {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .carbon-calculator h2 {
+        font-size: 1.8rem;
+    }
+
+    .question input {
+        font-size: 0.9rem;
+    }
+}
