@@ -11,8 +11,9 @@ import Footer from "./Footer";
 
 
 const HomePage = () => {
+  const [menuOpen, setMenuOpen] = useState(false); 
   const navigate = useNavigate();
-
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   // Contact Form State
   const [formData, setFormData] = useState({
@@ -90,15 +91,24 @@ const HomePage = () => {
       {/* Navigation Bar */}
       <header className="navbar">
         <div className="logo">🌱EcoConnect</div>
-        <nav className="nav-links">
+
+        {/* Desktop Navigation Links */}
+        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
           <a href="#home" className="nav-item">Home</a>
           <a href="#about" className="nav-item">About</a>
           <a href="#features" className="nav-item">Features</a>
           <a href="#contact" className="nav-item">Contact</a>
         </nav>
+
+        {/* Hamburger Menu for Mobile */}
+        <div className="hamburger" onClick={toggleMenu}>
+          <i className={`fa ${menuOpen ? "fa-times" : "fa-bars"}`}></i>
+        </div>
+
+        {/* Auth Buttons */}
         <div className="auth-buttons">
           <button className="login" onClick={() => navigate("/login")}>Login</button>
-          <button className="signup" onClick={() => navigate("/Signup")}>Sign up</button>
+          <button className="signup" onClick={() => navigate("/signup")}>Sign up</button>
         </div>
       </header>
 
