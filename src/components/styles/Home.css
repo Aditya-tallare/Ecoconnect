@@ -137,10 +137,12 @@
 
 /* Home Content */
 .home-content {
+  top: 10px;
   max-width: 500px;
 }
 
 .home-content h1 {
+  top: 20px;
   font-size: 2.8rem;
   color: #2c6e49;
   font-weight: 700;
@@ -208,8 +210,7 @@
   padding: 150px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
-  margin: 40px auto;
-  max-width: 1800px;
+  max-width: 2065px;
 }
 
 .about-content {
@@ -601,3 +602,129 @@
 .Green{
   color: #75d154;
 }
+/* Website Opening Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply animations */
+.home-section,
+.about-section,
+.features,
+.contact-section,
+.footer {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.header,
+.nav-links a,
+.auth-buttons button {
+  animation: slideIn 1.2s ease-in-out;
+}
+
+.feature-box,
+.about-content,
+.about-image img {
+  animation: zoomIn 1.5s ease-in-out;
+}
+.typing-effect {
+  display: inline-block;
+  overflow: hidden; /* Hides overflowing text */
+  white-space: nowrap; /* Ensures text stays on one line */
+  border-right: 2px solid #4CAF50; /* Typing cursor effect */
+  animation: typing 2s steps(10, end), blink 0.7s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0; /* Start with no text visible */
+  }
+  to {
+    width: 100%; /* Reveal the full text */
+  }
+}
+
+/* Cursor blinking effect */
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent; /* Cursor off */
+  }
+  50% {
+    border-color: #4CAF50; /* Cursor on */
+  }
+}
+.loading-screen {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f7f4; /* Soft eco-friendly background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  font-size: 4rem; /* Leaf size */
+  animation: spin 2s linear infinite;
+  color: #4CAF50; /* Eco green color */
+}
+
+.loading-text {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #4CAF50;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out infinite alternate;
+}
+
+/* Spinning animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text fade effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { auth } from "../../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth"; // ✅ Firebase Signup Function
 import "../styles/signup.css";
 
 const Signup = () => {
@@ -13,14 +15,29 @@ const Signup = () => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
+
     if (userData.password !== userData.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-    console.log("Signing up with:", userData);
-    // Add signup logic here (API call, Firebase, etc.)
+
+    try {
+      await createUserWithEmailAndPassword(auth, userData.email, userData.password);
+      alert("User Registered Successfully!");
+    } catch (error) {
+      console.error("Error signing up:", error.message);
+
+      // 🔴 Error Handling for Better UX
+      if (error.code === "auth/email-already-in-use") {
+        alert("This email is already in use. Please try logging in.");
+      } else if (error.code === "auth/weak-password") {
+        alert("Password should be at least 6 characters.");
+      } else {
+        alert("Failed to register. Please try again.");
+      }
+    }
   };
 
   return (

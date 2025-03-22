@@ -34,7 +34,6 @@ const Overview = () => {
         <ul>
           <li className="active"><FaChartLine /> Dashboard</li>
           <li><FaUsers /> Community</li>
-          <li><FaShoppingCart /> Marketplace</li>
           <li><FaLightbulb /> Sustainability Tips</li>
           <li onClick={() => navigate("/setting")}><FaCog /> Settings</li>
         </ul>
