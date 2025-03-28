@@ -3,10 +3,20 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 import "../styles/feature.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { submitContactForm } from "../pages/contactservice"
+import { submitContactForm } from "./contactservice"
 import { ref, set, push } from "firebase/database";
 import { db } from "../../firebase"; 
-import Footer from "./Footer";
+import Navbar from "../Shared/Navbar";
+import HomeSection from "./Home/HomeSection";
+import AboutSection from "./Home/AboutSection";
+import Gogreen from "./Home/Gogreen";
+import FeaturesSection from "./Home/FeaturesSection";
+import More from "./Home/More";
+import Footer from "../Shared/Footer";
+
+
+
+
 // Import your firebase instance
 
 
@@ -88,107 +98,12 @@ const HomePage = () => {
 
   return (
     <div>
-      {/* Navigation Bar */}
-      <header className="navbar">
-        <div className="logo">🌱EcoConnect</div>
-
-        {/* Desktop Navigation Links */}
-        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <a href="#home" className="nav-item">Home</a>
-          <a href="#about" className="nav-item">About</a>
-          <a href="#features" className="nav-item">Features</a>
-          <a href="#contact" className="nav-item">Contact</a>
-        </nav>
-
-        {/* Hamburger Menu for Mobile */}
-        <div className="hamburger" onClick={toggleMenu}>
-          <i className={`fa ${menuOpen ? "fa-times" : "fa-bars"}`}></i>
-        </div>
-
-        {/* Auth Buttons */}
-        <div className="auth-buttons">
-          <button className="login" onClick={() => navigate("/login")}>Login</button>
-          <button className="signup" onClick={() => navigate("/signup")}>Sign up</button>
-        </div>
-      </header>
-
-      {/* Home Section */}
-      <section className="home-section" id="home">
-        <div className="home-content">
-          <h1>
-            Welcome to <span className="highlight typing-effect">EcoConnect</span>
-          </h1>
-
-          <p className="intro ">
-            Empowering individuals and businesses to embrace sustainability
-            and make a tangible impact on our planet.
-          </p>
-
-          <div className="key-points">
-            <div className="point">
-              🌍 <strong>Reduce Your Carbon Footprint</strong> – Take actionable steps to minimize
-              your environmental impact.
-            </div>
-            <div className="point">
-              🤝 <strong>Join a Global Community</strong> – Connect with like-minded individuals
-              and businesses dedicated to sustainability.
-            </div>
-            <div className="point">
-              🛒 <strong>Explore Eco-Friendly Choices</strong> – Discover sustainable products,
-              tips, and green solutions that make a difference.
-            </div>
-          </div>
-
-          <button className="learn-more">Get Started!</button>
-        </div>
-      </section>
-
-
-      {/* About Section */}
-      <section className="about-section" id="about">
-        <div className="about-content">
-          <h1>About <span className="highlight">EcoConnect</span></h1>
-          <p className="intro">
-            EcoConnect is a revolutionary platform designed to help individuals and
-            businesses transition to a more sustainable lifestyle.
-          </p>
-          <p className="intro">
-            lorem34 EcoConnect is a revolutionary platform designed to help individuals and
-            businesses transition to a more sustainable lifestyle.
-          </p>
-          <p className="intro">
-            EcoConnect is a revolutionary platform designed to help individuals and
-            businesses transition to a more sustainable lifestyle.
-          </p>
-
-          <button className="learn-more">Learn More</button>
-        </div>
-
-        <div className="about-image">
-          <img
-            src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8="
-            alt="Eco-friendly environment"
-          />
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="features" id="features">
-        <h2 className="heading">
-          Our <span>Features</span>
-        </h2>
-
-        <div className="feature-container">
-          {features.map((feature, index) => (
-            <div className="feature-box" key={index}>
-              <i className={feature.icon}></i>
-              <h2>{feature.title}</h2>
-              <p>{feature.description}</p>
-              <a href="#" className="btn">Learn More</a>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      <Navbar/>
+      <HomeSection />
+      <AboutSection />
+      <Gogreen/>
+      <FeaturesSection />
+      <More/>
       {/* Contact Form */}
       <section className="contact-section" id="contact">
         <h2>Contact Us</h2>

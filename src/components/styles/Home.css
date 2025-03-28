@@ -231,9 +231,9 @@
 
 .point:hover {
   transform: translateX(5px);
-  background: #2fd656;
+  background: #0f1110;
   color:#2b7a0b;
-  box-shadow: 5px 0px 7px #4caf50;  
+    
 }
 
 /* Learn More Button */
@@ -325,6 +325,57 @@
 
 .about-image img:hover {
   transform: scale(1.05);
+}
+.gogreen-section {
+  background-color: #f0f4f8; /* Soft, neutral background */
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.gogreen-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2b2f33; /* Deep grey for text */
+  margin-bottom: 12px;
+}
+
+.gogreen-content {
+  font-size: 1.1rem;
+  color: #4a4e52; /* Softer text tone for readability */
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.gogreen-statistics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border: 2px solid #4CAF50; /* Eco-friendly green */
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4CAF50;  /* Emphasizing positive impact */
+}
+
+.stat-text {
+  font-size: 1rem;
+  color: #4a4e52;
 }
 
 /* Features Section */

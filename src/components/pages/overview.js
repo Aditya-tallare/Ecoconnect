@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaLeaf, FaChartLine, FaUsers, FaShoppingCart, FaLightbulb, FaCog } from "react-icons/fa";
+import { FaLeaf, FaChartLine, FaUsers, FaShoppingCart, FaLightbulb, FaCog, FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import "../styles/overview.css";
@@ -38,6 +38,34 @@ const Overview = () => {
           <li onClick={() => navigate("/setting")}><FaCog /> Settings</li>
         </ul>
       </aside>
+
+      {/* Profile Section */}
+      <div className="profile-section">
+  <div className="avatar-container">
+    <img
+      src="https://via.placeholder.com/90"
+      alt="Profile Avatar"
+      className="profile-avatar"
+    />
+    <div className="profile-status"></div>
+  </div>
+
+  <div className="profile-info">
+    <p className="profile-name">John Doe</p>
+    <p className="profile-role">Eco Champion 🌍</p>
+
+    <div className="profile-stats">
+      <div className="stat">♻️ Eco Score: 85%</div>
+      <div className="stat">🌿 CO₂ Saved: 2.5 kg</div>
+    </div>
+
+    <div className="profile-actions">
+      <button className="edit-btn">Edit Profile</button>
+      <button className="logout-btn">Logout</button>
+    </div>
+  </div>
+</div>
+
 
       {/* Main Content */}
       <main className="dashboard-content">
