@@ -1,7 +1,7 @@
 import React from "react";
 
 const Testimonials = () => (
-  <section className="bg-background py-20 px-6 h-[90vh]">
+  <section className="bg-background py-20 px-6 h-[100vh]" id="More">
     <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-4xl font-extrabold text-primary mb-12">
         Testimonials & <span className="text-accent">Success Stories</span>

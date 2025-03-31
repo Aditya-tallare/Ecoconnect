@@ -1,6 +1,7 @@
 import React from "react";
 import { FaUserCircle, FaLeaf, FaComments, FaUsers } from "react-icons/fa";
 import "../styles/community.css";
+import { useNavigate } from "react-router-dom";
 
 const communityPosts = [
   {
@@ -29,7 +30,9 @@ const communityPosts = [
   },
 ];
 
-const CommunityPage = () => {
+const CommunityPage = () =>
+ {
+  const navigate = useNavigate();
   return (
     <div className="community-page">
       {/* Header */}
@@ -59,7 +62,7 @@ const CommunityPage = () => {
       <section className="community-cta">
         <h2>🌍 Join the Movement!</h2>
         <p>Start posting, commenting, and sharing your sustainability journey today.</p>
-        <button className="join-btn">Join Now</button>
+        <button className="join-btn" onClick={() => navigate("/chat")}>Join Now</button>
       </section>
     </div>
   );

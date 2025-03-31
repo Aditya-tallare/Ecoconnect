@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { auth } from "../../firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth"; // ✅ Firebase Signup Function
-import "../styles/signup.css";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import "../../styles/signup.css"; 
 
 const Signup = () => {
   const [userData, setUserData] = useState({
@@ -11,10 +11,15 @@ const Signup = () => {
     confirmPassword: "",
   });
 
+  const auth = getAuth();
+  const navigate = useNavigate(); 
+
+  // Handle Input Changes
   const handleChange = (e) => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
+  // Handle Signup Form Submission
   const handleSignup = async (e) => {
     e.preventDefault();
 
@@ -24,12 +29,21 @@ const Signup = () => {
     }
 
     try {
-      await createUserWithEmailAndPassword(auth, userData.email, userData.password);
+      const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
+      const user = userCredential.user;
+
+      // Update Display Name in Firebase
+      await updateProfile(user, {
+        displayName: userData.name,
+      });
+
       alert("User Registered Successfully!");
+      navigate("/overview"); // Redirect to Profile Page after signup
+
     } catch (error) {
       console.error("Error signing up:", error.message);
 
-      // 🔴 Error Handling for Better UX
+      // 🔴 Improved Error Handling
       if (error.code === "auth/email-already-in-use") {
         alert("This email is already in use. Please try logging in.");
       } else if (error.code === "auth/weak-password") {
@@ -51,7 +65,7 @@ const Signup = () => {
             <input
               type="text"
               name="name"
-              placeholder="Full Name"
+              placeholder="User Name"
               value={userData.name}
               onChange={handleChange}
               required

@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/components/pages/Home";
-import Login from "../src/components/pages/login";
-import Signup from "../src/components/pages/signup";
-import Overview from "../src/components/pages/overview";
+import Login from "../src/components/pages/auth/login";
+import Signup from "../src/components/pages/auth/signup";
+import Overview from "./components/pages/Dashboard/overview";
 import CarbonFootprintCalculator from "./components/carbon/carbon-calculator";
 import SustainabilityTips from "../src/components/pages/sustain";
 import CommunityPage from "../src/components/pages/community";
