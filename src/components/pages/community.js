@@ -62,7 +62,7 @@ const CommunityPage = () =>
       <section className="community-cta">
         <h2>🌍 Join the Movement!</h2>
         <p>Start posting, commenting, and sharing your sustainability journey today.</p>
-        <button className="join-btn" onClick={() => navigate("/chat")}>Join Now</button>
+        <button className="join-btn" onClick={() => navigate("/Chat")}>Join Now</button>
       </section>
     </div>
   );

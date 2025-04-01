@@ -7,6 +7,8 @@ import Overview from "./components/pages/Dashboard/overview";
 import CarbonFootprintCalculator from "./components/carbon/carbon-calculator";
 import SustainabilityTips from "../src/components/pages/sustain";
 import CommunityPage from "../src/components/pages/community";
+import Chat from '../src/components/pages/Chat';  // Correct the path if necessary
+
 function App() {
   return (
     <Router>
@@ -18,6 +20,7 @@ function App() {
         <Route path="/carbon-calculator" element={<CarbonFootprintCalculator/>}/>
         <Route path="/sustain" element={<SustainabilityTips/>}/>
         <Route path="/community" element={<CommunityPage/>}/>
+        <Route path="/Chat" element={<Chat/>}/>
         
       </Routes>
     </Router>
